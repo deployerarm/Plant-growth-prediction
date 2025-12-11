@@ -1,0 +1,156 @@
+Image classification:
+====================
+1. Dataset Preparation
+    -   Dataset Link : https://www.kaggle.com/datasets/shamilbinhossain/medical-plant-dataset
+    -   Load dataset (train/test)
+    -   Apply transforms (resize, normalize, augment)
+    -   Create DataLoaders
+2. Visualizations
+    -   Class distribution bar chart
+    -   Sample images per class
+3. Trainig setup
+    -   Define train_model() function
+    -   Define evaluate_model() function
+4. Model Training
+    -   ResNet50
+    -   VGG16
+    -   MobileNetV2
+    -   EfficientNet-B0
+5. Model saving
+    -   Save model weights (.pth)
+6. Model Evaluation
+    -   Classification report
+    -   Confusion matrix
+    -   Accuracy/Loss curves
+    -   Store results for comparison
+7. Model comparison
+    -   Create performance table
+    -   Plot comparison graphs
+8. Prediction
+    -   Load best model (MobileNetV2)
+    -   Predict class + confidence for input image
+9. GRAD-CAM
+    -   Generate heatmap
+    -   Overlay heatmap on original image
+
+10. GROWTH PREDICTION (Tabular ML Models)
+==========================================
+10.1 Dataset Preparation
+    -   Load growth dataset (CSV)
+    -   Clean: remove nulls & duplicates
+    -   Label encode plant_species
+    -   Split into X (features) and y (height_cm, leaf_area_cm2, health_score)
+    -   Train-test split (80/20)
+
+10.2 Model Training (Multi-Output Regression)
+    Models trained:
+    -   XGBoost
+    -   Random Forest
+    -   Gradient Boosting
+    -   Decision Tree
+    -   LightGBM
+    -   Stacking Regressor (best)
+
+10.3 Evaluation
+    For all 3 targets compute:
+    -   EVAR
+    -   MAE
+    -   RMSE
+    -   R²
+    Visualizations:
+    -   Actual vs Predicted plots
+    -   Metrics comparison table
+    -   Bar charts (R² and others)
+
+10.4 Save Model
+    -   Save model → Models/growth_pred_model.sav
+    -   Save label encoder → Models/label_encoder.sav
+
+
+11. GROWTH FORECASTING (LSTM Time-Series Model)
+================================================
+11.1 Dataset Processing
+    -   Select a plant species (example: Tulsi)
+    -   Use features: temperature, humidity, soil_moisture, soil_ph, light_intensity, height_cm
+    -   Normalize using MinMaxScaler
+    -   Create sequences (window size = 30)
+
+11.2 LSTM Architecture
+    -   2-layer LSTM (hidden_size=128)
+    -   FC layer → predict future height
+
+11.3 Training
+    -   Train for 1000 epochs
+    -   Save model → Models/growth_forecast_lstm.pth
+    -   Save scaler → Models/lstm_scaler.sav
+
+11.4 Evaluation & Visualization
+    -   Compute MAE, RMSE, R²
+    -   Plot Actual vs Predicted (line)
+    -   Scatter plot for correlation
+
+
+Unified Prediction System
+=========================
+Image → Species Classification
+    -   Load best CNN model (MobileNetV2)
+    -   Predict class + confidence
+    -   Generate Grad-CAM heatmap
+
+Growth Prediction (Tabular ML)
+    -   Use predicted species + environment inputs
+    Predict:
+    -   Height
+    -   Leaf Area
+    -   Health Score
+
+Growth Forecasting (LSTM)
+    -   Predict future height trend
+    -   Plot forecast curve
+
+
+Flask Application:
+=================
+1. User uploads plant leaf image
+
+2. MobileNetV2 → predicts species
+
+3. Grad-CAM → highlights disease / principal leaf region
+
+4. User enters environmental inputs
+
+5. ML Model → predicts:
+    • Height (cm)
+    • Leaf Area (cm²)
+    • Health Score (0–100)
+
+6. LSTM Model → forecasts future height trend
+
+7. LLaMA (Groq API) → generates complete explanation
+
+8. Results page displays:
+    • Predicted Species + Confidence
+    • Growth Predictions (Height, Leaf Area, Health Score)
+    • Future Growth Forecast Plot
+    • Grad-CAM Heatmap Visualization
+    • LLaMA Explanation
+
+
+Proposed System:
+================
+
+• The system integrates deep learning, machine learning, and time-series forecasting to form a complete plant intelligence pipeline.
+
+• MobileNetV2 achieved the best image classification performance with 100% accuracy, ensuring highly reliable species identification.
+
+• Grad-CAM visualizations enhance interpretability by highlighting the important leaf regions used for prediction.
+
+• Multi-output regression models were trained on curated environmental and biometric data for growth prediction.
+
+• XGBoost and LightGBM delivered the strongest results, achieving R² scores above 0.96 for height, leaf area, and health score.
+
+• A species-specific LSTM model was developed for future growth forecasting, achieving an R² of 0.9915 for height prediction.
+
+• The unified Flask application integrates image classification, growth prediction, LSTM forecasting, and LLaMA-generated natural-language explanations.
+
+• The system provides an accurate, interpretable, and user-friendly end-to-end plant-growth analytics solution.
