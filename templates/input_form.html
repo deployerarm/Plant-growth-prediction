@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>Plant Classification Results | Aranyak</title>
+    <meta
+      name="description"
+      content="View plant classification results and provide environmental data for growth prediction."
+    />
+
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../static/assets/img/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../static/assets/img/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../static/assets/img/favicons/favicon-16x16.png"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="../static/assets/img/favicons/favicon.ico"
+    />
+    <link rel="manifest" href="../static/assets/img/favicons/manifest.json" />
+    <meta
+      name="msapplication-TileImage"
+      content="../static/assets/img/favicons/mstile-150x150.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <script src="../static/assets/js/config.js"></script>
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link
+      rel="stylesheet"
+      href="../static/vendors/swiper/swiper-bundle.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="../static/assets/css/theme.css"
+      rel="stylesheet"
+      id="style-default"
+    />
+    <link
+      href="../static/assets/css/user-rtl.css"
+      rel="stylesheet"
+      id="user-style-rtl"
+    />
+    <link
+      href="../static/assets/css/user.css"
+      rel="stylesheet"
+      id="user-style-default"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+  </head>
+
+  <body>
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+      <div class="bg-white">
+        <div class="content">
+          <nav
+            class="navbar navbar-expand-lg py-1"
+            id="navbar-top"
+            data-navbar-soft-on-scroll="data-navbar-soft-on-scroll"
+          >
+            <div class="container">
+              <a
+                class="navbar-brand me-lg-auto cursor-pointer text-decoration-none"
+                href=""
+                ><span class="text-gradient fw-bold fs-4 fs-md-3"
+                  >Plant Growth AI</span
+                >
+              </a>
+              <div
+                class="collapse navbar-collapse"
+                id="navbarSupportedContent"
+                data-navbar-collapse="data-navbar-collapse"
+              >
+                <div
+                  class="container d-lg-flex justify-content-lg-end pe-lg-0 w-lg-100"
+                >
+                  <ul
+                    class="navbar-nav mt-2 mt-lg-1 ms-lg-4 ms-xl-8 ms-2xl-9 gap-lg-x1"
+                    data-navbar-nav="data-navbar-nav"
+                  >
+                    <li class="nav-item">
+                      <a
+                        class="nav-link nav-bar-item px-0"
+                        href="/home"
+                        title="home"
+                        >Classify Plant</a
+                      >
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link nav-bar-item px-0 dropdown-toggle"
+                        href="#"
+                        id="graphsDropdown"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        title="graphs"
+                        >Graphs</a
+                      >
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="graphsDropdown"
+                      >
+                        <li>
+                          <a class="dropdown-item" href="/graphs1">
+                            <span class="uil uil-chart-bar me-2"></span>
+                            Plant Classification
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="/graphs2">
+                            <span class="uil uil-chart-line me-2"></span>
+                            Plant Growth
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link nav-bar-item px-0 dropdown-toggle"
+                        href="#"
+                        id="notebookDropdown"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        title="notebook"
+                        >Notebooks</a
+                      >
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="notebookDropdown"
+                      >
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="../static/Plant_Classification.html"
+                          >
+                            <span class="uil uil-book-open me-2"></span>
+                            Plant Classification
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="../static/Growth_Condition_Prediction.html"
+                          >
+                            <span class="uil uil-chart-pie me-2"></span>
+                            Plant Condition Prediction
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="../static/Growth_Forecasting.html"
+                          >
+                            <span class="uil uil-cog me-2"></span>
+                            Plant Growth Forecasting
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link nav-bar-item px-0"
+                        href="/"
+                        title="home"
+                        >Log Out</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+          <div
+            class="container"
+            data-bs-target="#navbar-top"
+            data-bs-spy="scroll"
+            tabindex="0"
+          >
+            <!-- Classification Results Section -->
+            <section class="mb-9 mb-lg-10 mb-xxl-11 pt-6">
+              <div class="text-center mb-6 mb-lg-7">
+                <h3
+                  class="fs-8 fs-md-7 fs-xxl-6 text-success fw-bold mb-3 text-capitalize"
+                >
+                  Classification Results
+                </h3>
+                <h1
+                  class="fs-5 fs-md-3 fs-xxl-2 text-secondary text-capitalize fw-light mb-4"
+                >
+                  Plant Species <span class="fw-bold">Identified</span>
+                </h1>
+                <p class="fs-8 fs-md-11 fs-xxl-7 text-primary mb-0 fw-light">
+                  Our AI model has analyzed your plant image. Review the results
+                  below and provide environmental data for growth prediction.
+                </p>
+              </div>
+
+              <!-- Plant Species Section -->
+              <div class="mb-5 mb-lg-6">
+                <h4 class="text-success fw-bold fs-7 fs-md-6 mb-4">
+                  <span class="uil uil-leaf me-2"></span>
+                  Identified Plant Species
+                </h4>
+                <div class="row g-4 g-lg-6 justify-content-center">
+                  <!-- Plant Species Card - Full Width -->
+                  <div class="col-12">
+                    <div
+                      class="card border-0 shadow-sm h-100 classification-result-card"
+                    >
+                      <div class="card-body text-center p-4 p-lg-5">
+                        <div class="mb-4">
+                          <span class="uil uil-leaf fs-1 text-success"></span>
+                        </div>
+                        <h3 class="text-success fw-bold fs-6 fs-md-5 mb-3">
+                          {% if plant %}{{ plant }}{% else %}Plant Species{%
+                          endif %}
+                        </h3>
+                        <p class="text-primary fs-9 mb-0">
+                          AI Classification Result
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row g-4 g-lg-6 justify-content-center mb-6 mb-lg-8">
+                <!-- Original Image Card -->
+                <div class="col-12 col-md-6">
+                  <div
+                    class="card border-0 shadow-sm h-100 classification-result-card"
+                  >
+                    <div class="card-body p-0 d-flex flex-column">
+                      {% if filename %}
+                      <div
+                        class="d-flex align-items-center justify-content-center"
+                        style="
+                          min-height: 450px;
+                          max-height: 500px;
+                          background-color: #f8f9fa;
+                        "
+                      >
+                        <img
+                          src="../static/uploads/{{ filename }}"
+                          alt="Original Plant Image"
+                          class="img-fluid rounded-top"
+                          style="
+                            max-height: 450px;
+                            max-width: 100%;
+                            object-fit: contain;
+                            width: auto;
+                            height: auto;
+                          "
+                        />
+                      </div>
+                      {% else %}
+                      <div
+                        class="d-flex align-items-center justify-content-center"
+                        style="min-height: 450px"
+                      >
+                        <span class="uil uil-image fs-1 text-muted"></span>
+                      </div>
+                      {% endif %}
+                      <div class="p-4 text-center">
+                        <h5 class="text-secondary fw-bold mb-2">
+                          Original Image
+                        </h5>
+                        <p class="text-primary fs-9 mb-0">
+                          Uploaded Plant Photo
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- GradCAM Visualization Card -->
+                <div class="col-12 col-md-6">
+                  <div
+                    class="card border-0 shadow-sm h-100 classification-result-card"
+                  >
+                    <div class="card-body p-0 d-flex flex-column">
+                      {% if cam %}
+                      <div
+                        class="d-flex align-items-center justify-content-center"
+                        style="
+                          min-height: 450px;
+                          max-height: 500px;
+                          background-color: #f8f9fa;
+                        "
+                      >
+                        <img
+                          src="../static/uploads/{{ cam }}"
+                          alt="GradCAM Heatmap"
+                          class="img-fluid rounded-top"
+                          style="
+                            max-height: 450px;
+                            max-width: 100%;
+                            object-fit: contain;
+                            width: auto;
+                            height: auto;
+                          "
+                        />
+                      </div>
+                      {% else %}
+                      <div
+                        class="d-flex align-items-center justify-content-center"
+                        style="min-height: 450px"
+                      >
+                        <span class="uil uil-focus fs-1 text-muted"></span>
+                      </div>
+                      {% endif %}
+                      <div class="p-4 text-center">
+                        <h5 class="text-secondary fw-bold mb-2">
+                          GradCAM Heatmap
+                        </h5>
+                        <p class="text-primary fs-9 mb-0">AI Focus Areas</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Environmental Data Form Section -->
+            <section class="mb-9 mb-lg-10 mb-xxl-11">
+              <div class="row justify-content-center">
+                <div class="col-12 col-lg-10 col-xl-8">
+                  <div class="text-center mb-6 mb-lg-7">
+                    <h3
+                      class="fs-8 fs-md-7 fs-xxl-6 text-success fw-bold mb-3 text-capitalize"
+                    >
+                      Environmental Data
+                    </h3>
+                    <h1
+                      class="fs-5 fs-md-3 fs-xxl-2 text-secondary text-capitalize fw-light mb-4"
+                    >
+                      Provide <span class="fw-bold">Growth Conditions</span>
+                    </h1>
+                    <p
+                      class="fs-8 fs-md-11 fs-xxl-7 text-primary mb-0 fw-light"
+                    >
+                      Enter the current environmental conditions to get accurate
+                      growth predictions and future forecasts
+                    </p>
+                  </div>
+
+                  <form
+                    method="POST"
+                    action="/predict"
+                    class="needs-validation"
+                    novalidate
+                  >
+                    <!-- Hidden Plant Species Field -->
+                    <input
+                      type="hidden"
+                      name="plant_species"
+                      value="{% if plant %}{{ plant }}{% endif %}"
+                      required
+                    />
+
+                    <div class="card border-0 shadow-sm mb-4 input-form-card">
+                      <div class="card-body p-4 p-lg-5">
+                        <h4 class="text-success fw-bold mb-4">
+                          <span class="uil uil-info-circle me-2"></span>
+                          Plant Information
+                        </h4>
+
+                        <div class="row g-4">
+                          <div class="col-12 col-md-6">
+                            <label
+                              for="plant_age_days"
+                              class="form-label text-secondary fw-bold mb-2"
+                            >
+                              <span class="uil uil-calendar-alt me-2"></span>
+                              Plant Age (Days)
+                            </label>
+                            <input
+                              type="number"
+                              class="form-control"
+                              id="plant_age_days"
+                              name="plant_age_days"
+                              step="any"
+                              placeholder="e.g., 30"
+                              required
+                            />
+                            <div class="invalid-feedback">
+                              Please enter a valid plant age.
+                            </div>
+                            <small class="text-muted"
+                              >Enter the age of your plant in days</small
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card border-0 shadow-sm mb-4 input-form-card">
+                      <div class="card-body p-4 p-lg-5">
+                        <h4 class="text-success fw-bold mb-4">
+                          <span class="uil uil-temperature me-2"></span>
+                          Climate Conditions
+                        </h4>
+
+                        <div class="row g-4">
+                          <div class="col-12 col-md-6">
+                            <label
+                              for="temperature"
+                              class="form-label text-secondary fw-bold mb-2"
+                            >
+                              <span class="uil uil-temperature me-2"></span>
+                              Temperature (°C)
+                            </label>
+                            <input
+                              type="number"
+                              class="form-control"
+                              id="temperature"
+                              name="temperature"
+                              step="any"
+                              placeholder="e.g., 25.5"
+                              required
+                            />
+                            <div class="invalid-feedback">
+                              Please enter a valid temperature.
+                            </div>
+                            <small class="text-muted"
+                              >Current temperature in Celsius</small
+                            >
+                          </div>
+
+                          <div class="col-12 col-md-6">
+                            <label
+                              for="humidity"
+                              class="form-label text-secondary fw-bold mb-2"
+                            >
+                              <span class="uil uil-tint me-2"></span>
+                              Humidity (%)
+                            </label>
+                            <input
+                              type="number"
+                              class="form-control"
+                              id="humidity"
+                              name="humidity"
+                              step="any"
+                              placeholder="e.g., 65.0"
+                              required
+                            />
+                            <div class="invalid-feedback">
+                              Please enter a valid humidity percentage.
+                            </div>
+                            <small class="text-muted"
+                              >Relative humidity percentage (0-100)</small
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card border-0 shadow-sm mb-4 input-form-card">
+                      <div class="card-body p-4 p-lg-5">
+                        <h4 class="text-success fw-bold mb-4">
+                          <span class="uil uil-flask me-2"></span>
+                          Soil Conditions
+                        </h4>
+
+                        <div class="row g-4">
+                          <div class="col-12 col-md-6">
+                            <label
+                              for="soil_moisture"
+                              class="form-label text-secondary fw-bold mb-2"
+                            >
+                              <span class="uil uil-water me-2"></span>
+                              Soil Moisture (%)
+                            </label>
+                            <input
+                              type="number"
+                              class="form-control"
+                              id="soil_moisture"
+                              name="soil_moisture"
+                              step="any"
+                              placeholder="e.g., 45.0"
+                              required
+                            />
+                            <div class="invalid-feedback">
+                              Please enter a valid soil moisture percentage.
+                            </div>
+                            <small class="text-muted"
+                              >Soil moisture level (0-100%)</small
+                            >
+                          </div>
+
+                          <div class="col-12 col-md-6">
+                            <label
+                              for="soil_ph"
+                              class="form-label text-secondary fw-bold mb-2"
+                            >
+                              <span class="uil uil-flask me-2"></span>
+                              Soil pH
+                            </label>
+                            <input
+                              type="number"
+                              class="form-control"
+                              id="soil_ph"
+                              name="soil_ph"
+                              step="any"
+                              placeholder="e.g., 6.5"
+                              required
+                            />
+                            <div class="invalid-feedback">
+                              Please enter a valid pH value (0-14).
+                            </div>
+                            <small class="text-muted"
+                              >Soil pH level (0-14 scale)</small
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card border-0 shadow-sm mb-5 input-form-card">
+                      <div class="card-body p-4 p-lg-5">
+                        <h4 class="text-success fw-bold mb-4">
+                          <span class="uil uil-sun me-2"></span>
+                          Light Conditions
+                        </h4>
+
+                        <div class="row g-4">
+                          <div class="col-12">
+                            <label
+                              for="light_intensity"
+                              class="form-label text-secondary fw-bold mb-2"
+                            >
+                              <span class="uil uil-sun me-2"></span>
+                              Light Intensity (lux)
+                            </label>
+                            <input
+                              type="number"
+                              class="form-control"
+                              id="light_intensity"
+                              name="light_intensity"
+                              step="any"
+                              placeholder="e.g., 5000"
+                              required
+                            />
+                            <div class="invalid-feedback">
+                              Please enter a valid light intensity.
+                            </div>
+                            <small class="text-muted"
+                              >Light intensity in lux (0-100,000)</small
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="text-center">
+                      <button
+                        type="submit"
+                        class="btn btn-gradient fs-8 px-5 py-3"
+                      >
+                        <span class="uil uil-brain me-2"></span>
+                        Get Growth Predictions
+                        <span class="uil uil-arrow-right ms-2"></span>
+                      </button>
+                      <a
+                        href="/home"
+                        class="btn btn-outline-secondary fs-8 px-5 py-3 ms-3"
+                      >
+                        <span class="uil uil-redo me-2"></span>
+                        Upload New Image
+                      </a>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <button class="btn scroll-to-top" data-scroll-top="data-scroll-top">
+            <span class="uil uil-angle-up text-white"></span>
+          </button>
+
+          <footer>
+            <div
+              class="bg-success py-2 py-md-3 position-relative terms-condition"
+            >
+              <div class="overley-background"></div>
+              <p class="text-white text-center mb-0">
+                © 2025 Plant Growth AI. All rights reserved.
+              </p>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </main>
+    <!-- ===============================================-->
+    <!--    End of Main Content-->
+    <!-- ===============================================-->
+
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+    <script src="../static/vendors/popper/popper.min.js"></script>
+    <script src="../static/vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="../static/vendors/is/is.min.js"></script>
+    <script src="../static/vendors/countup/countUp.umd.js"></script>
+    <script src="../static/vendors/swiper/swiper-bundle.min.js"></script>
+    <script src="../static/vendors/lodash/lodash.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="../static/vendors/list.js/list.min.js"></script>
+    <script src="../static/assets/js/theme.js"></script>
+
+    <script>
+      // Form validation
+      (function () {
+        "use strict";
+        var forms = document.querySelectorAll(".needs-validation");
+        Array.prototype.slice.call(forms).forEach(function (form) {
+          form.addEventListener(
+            "submit",
+            function (event) {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script>
+  </body>
+</html>

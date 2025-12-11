@@ -1,0 +1,145 @@
+/* -------------------------------------------------------------------------- */
+/*                                Aranyak Button                               */
+/* -------------------------------------------------------------------------- */
+/* prettier-ignore */
+/*# sourceMappingURL=user.css.map */
+
+/* -------------------------------------------------------------------------- */
+/*                            Upload Section Styles                            */
+/* -------------------------------------------------------------------------- */
+
+.upload-form-container {
+  margin-bottom: 2rem;
+}
+
+.upload-area {
+  border: 3px dashed #28a745;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #f8fff9 0%, #ffffff 100%);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-area:hover {
+  border-color: #20c997;
+  background: linear-gradient(135deg, #f0fff4 0%, #f8fff9 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(40, 167, 69, 0.15);
+}
+
+.upload-area.dragover {
+  border-color: #20c997;
+  background: linear-gradient(135deg, #e8f5e9 0%, #f0fff4 100%);
+  transform: scale(1.02);
+}
+
+.upload-content {
+  width: 100%;
+  z-index: 1;
+}
+
+.upload-icon {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px); 
+  }
+  50% { 
+    transform: translateY(-10px); 
+  }
+}
+
+.upload-preview {
+  width: 100%;
+  padding: 2rem;
+}
+
+.preview-image-container {
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.preview-image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.feature-item {
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  background: #f8fff9;
+  transform: translateY(-5px);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                         Input Form Page Styles                             */
+/* -------------------------------------------------------------------------- */
+
+.input-form-card {
+  transition: all 0.3s ease;
+  border: 1px solid rgba(40, 167, 69, 0.1) !important;
+}
+
+.input-form-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(40, 167, 69, 0.15) !important;
+  border-color: rgba(40, 167, 69, 0.3) !important;
+}
+
+.input-form-card .form-label {
+  font-size: 0.9rem;
+  color: #495057;
+}
+
+.input-form-card .form-control {
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.input-form-card .form-control:focus {
+  border-color: #28a745;
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.15);
+}
+
+.input-form-card .form-control:valid {
+  border-color: #28a745;
+}
+
+.input-form-card .form-control:invalid:not(:placeholder-shown) {
+  border-color: #dc3545;
+}
+
+.classification-result-card {
+  transition: all 0.3s ease;
+  border: 1px solid rgba(40, 167, 69, 0.1) !important;
+  overflow: hidden;
+}
+
+.classification-result-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(40, 167, 69, 0.2) !important;
+}
+
+.classification-result-card img {
+  transition: transform 0.3s ease;
+}
+
+.classification-result-card:hover img {
+  transform: scale(1.05);
+}

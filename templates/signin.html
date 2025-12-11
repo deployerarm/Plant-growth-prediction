@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>Sign In | Plant Growth AI</title>
+    <meta
+      name="description"
+      content="Sign in to your Plant Growth AI account to access advanced plant prediction features."
+    />
+
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../static/assets/img/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../static/assets/img/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../static/assets/img/favicons/favicon-16x16.png"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="../static/assets/img/favicons/favicon.ico"
+    />
+    <link rel="manifest" href="../static/assets/img/favicons/manifest.json" />
+    <meta
+      name="msapplication-TileImage"
+      content="../static/assets/img/favicons/mstile-150x150.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <script src="../static/assets/js/config.js"></script>
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link
+      rel="stylesheet"
+      href="../static/vendors/swiper/swiper-bundle.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="../static/assets/css/theme.css"
+      rel="stylesheet"
+      id="style-default"
+    />
+    <link
+      href="../static/assets/css/user-rtl.css"
+      rel="stylesheet"
+      id="user-style-rtl"
+    />
+    <link
+      href="../static/assets/css/user.css"
+      rel="stylesheet"
+      id="user-style-default"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+  </head>
+
+  <body>
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+      <div class="bg-white">
+        <div class="content">
+
+
+          <div
+            class="container"
+            data-bs-target="#navbar-top"
+            data-bs-spy="scroll"
+            tabindex="0"
+          >
+            <!-- Sign In Section -->
+            <section class="mb-9 mb-lg-10 mb-xxl-11 pt-6">
+              <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                  <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4 p-lg-5">
+                      <!-- Header -->
+                      <div class="text-center mb-5">
+                        <h3
+                          class="fs-8 fs-md-7 fs-xxl-6 text-success fw-bold mb-3 text-capitalize"
+                        >
+                          Welcome Back
+                        </h3>
+                        <h1
+                          class="fs-5 fs-md-3 fs-xxl-2 text-secondary text-capitalize fw-light mb-3"
+                        >
+                          Sign In to Your
+                          <span class="fw-bold">Account</span>
+                        </h1>
+                        <p class="fs-8 fs-md-11 fs-xxl-7 text-primary mb-0 fw-light">
+                          Access your plant growth predictions and analytics
+                        </p>
+                      </div>
+
+                      <!-- Error Message -->
+                      {% if message %}
+                      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <span class="uil uil-exclamation-triangle me-2"></span>
+                        {{ message }}
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="alert"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      {% endif %}
+
+                      <!-- Sign In Form -->
+                      <form method="POST" action="/signin" id="signinForm">
+                        <div class="mb-4">
+                          <label for="user" class="form-label text-secondary fw-bold mb-2">
+                            <span class="uil uil-user me-2 text-success"></span>
+                            Username
+                          </label>
+                          <input
+                            type="text"
+                            class="form-control form-control-lg"
+                            id="user"
+                            name="user"
+                            placeholder="Enter your username"
+                            required
+                            autocomplete="username"
+                          />
+                        </div>
+
+                        <div class="mb-4">
+                          <label for="password" class="form-label text-secondary fw-bold mb-2">
+                            <span class="uil uil-lock me-2 text-success"></span>
+                            Password
+                          </label>
+                          <div class="position-relative">
+                            <input
+                              type="password"
+                              class="form-control form-control-lg"
+                              id="password"
+                              name="password"
+                              placeholder="Enter your password"
+                              required
+                              autocomplete="current-password"
+                            />
+                            <button
+                              type="button"
+                              class="btn btn-link position-absolute end-0 top-50 translate-middle-y pe-3"
+                              id="togglePassword"
+                              style="border: none; background: none; color: #6c757d;"
+                            >
+                              <span class="uil uil-eye" id="eyeIcon"></span>
+                            </button>
+                          </div>
+                        </div>
+
+                        <button
+                          type="submit"
+                          class="btn btn-gradient w-100 fs-8 py-3 mb-4"
+                        >
+                          <span class="uil uil-signin me-2"></span>
+                          Sign In
+                        </button>
+                      </form>
+
+                      <!-- Sign Up Link -->
+                      <div class="text-center">
+                        <p class="text-primary fs-9 mb-0">
+                          Don't have an account?
+                          <a href="/logon" class="text-success fw-bold text-decoration-none">
+                            Sign Up
+                          </a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <button class="btn scroll-to-top" data-scroll-top="data-scroll-top">
+            <span class="uil uil-angle-up text-white"></span>
+          </button>
+
+          <footer>
+            <div
+              class="bg-success py-2 py-md-3 position-relative terms-condition"
+            >
+              <div class="overley-background"></div>
+              <p class="text-white text-center mb-0">
+                © 2025 Plant Growth AI. All rights reserved.
+              </p>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </main>
+    <!-- ===============================================-->
+    <!--    End of Main Content-->
+    <!-- ===============================================-->
+
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+    <script src="../static/vendors/popper/popper.min.js"></script>
+    <script src="../static/vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="../static/vendors/is/is.min.js"></script>
+    <script src="../static/vendors/countup/countUp.umd.js"></script>
+    <script src="../static/vendors/swiper/swiper-bundle.min.js"></script>
+    <script src="../static/vendors/lodash/lodash.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="../static/vendors/list.js/list.min.js"></script>
+    <script src="../static/assets/js/theme.js"></script>
+  </body>
+</html>
+

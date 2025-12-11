@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>Plant Growth Condition Prediction & Forecasting | Aranyak</title>
+    <meta
+      name="description"
+      content="Predict plant growth conditions and forecast future growth using AI-powered machine learning models. Get accurate predictions for height, leaf area, and health scores."
+    />
+
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../static/assets/img/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../static/assets/img/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../static/assets/img/favicons/favicon-16x16.png"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="../static/assets/img/favicons/favicon.ico"
+    />
+    <link rel="manifest" href="../static/assets/img/favicons/manifest.json" />
+    <meta
+      name="msapplication-TileImage"
+      content="../static/assets/img/favicons/mstile-150x150.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <script src="../static/assets/js/config.js"></script>
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link
+      rel="stylesheet"
+      href="../static/vendors/swiper/swiper-bundle.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="../static/assets/css/theme.css"
+      rel="stylesheet"
+      id="style-default"
+    />
+    <link
+      href="../static/assets/css/user-rtl.css"
+      rel="stylesheet"
+      id="user-style-rtl"
+    />
+    <link
+      href="../static/assets/css/user.css"
+      rel="stylesheet"
+      id="user-style-default"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+  </head>
+
+  <body>
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+      <div class="bg-white">
+        <div class="content">
+          <nav
+            class="navbar navbar-expand-lg py-1"
+            id="navbar-top"
+            data-navbar-soft-on-scroll="data-navbar-soft-on-scroll"
+          >
+            <div class="container">
+              <a class="navbar-brand me-lg-auto cursor-pointer text-decoration-none" href=""
+                ><span class="text-gradient fw-bold fs-4 fs-md-3">Plant Growth AI</span>
+              </a>
+              <div
+                class="collapse navbar-collapse"
+                id="navbarSupportedContent"
+                data-navbar-collapse="data-navbar-collapse"
+              >
+                <div
+                  class="container d-lg-flex justify-content-lg-end pe-lg-0 w-lg-100"
+                >
+                  <ul
+                    class="navbar-nav mt-2 mt-lg-1 ms-lg-4 ms-xl-8 ms-2xl-9 gap-lg-x1"
+                    data-navbar-nav="data-navbar-nav"
+                  >
+                    <li class="nav-item">
+                      <a
+                        class="nav-link nav-bar-item px-0"
+                        href="/home"
+                        title="home"
+                        >Classify Plant</a
+                      >
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link nav-bar-item px-0 dropdown-toggle"
+                        href="#"
+                        id="graphsDropdown"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        title="graphs"
+                        >Graphs</a
+                      >
+                      <ul class="dropdown-menu" aria-labelledby="graphsDropdown">
+                        <li>
+                          <a class="dropdown-item" href="/graphs1">
+                            <span class="uil uil-chart-bar me-2"></span>
+                            Plant Classification
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="/graphs2">
+                            <span class="uil uil-chart-line me-2"></span>
+                            Plant Growth
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link nav-bar-item px-0 dropdown-toggle"
+                        href="#"
+                        id="notebookDropdown"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        title="notebook"
+                        >Notebooks</a
+                      >
+                      <ul class="dropdown-menu" aria-labelledby="notebookDropdown">
+                        <li>
+                          <a class="dropdown-item" href="../static/Plant_Classification.html">
+                            <span class="uil uil-book-open me-2"></span>
+                            Plant Classification
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="../static/Growth_Condition_Prediction.html">
+                            <span class="uil uil-chart-pie me-2"></span>
+                            Plant Condition Prediction
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="../static/Growth_Forecasting.html">
+                            <span class="uil uil-cog me-2"></span>
+                            Plant Growth Forecasting
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link nav-bar-item px-0"
+                        href="/"
+                        title="home"
+                        >Log Out</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+          <div
+            class="container"
+            data-bs-target="#navbar-top"
+            data-bs-spy="scroll"
+            tabindex="0"
+          >
+            <section
+              class="mb-9 mb-lg-10 mb-xxl-11 text-center text-lg-start mt-9"
+              id="home"
+            >
+              <div>
+                <div
+                  class="row g-4 g-lg-6 g-xl-7 mb-6 mb-lg-7 mb-xl-10 align-items-center"
+                >
+                  <div class="col-12 col-lg-6">
+                    <img
+                      class="img-fluid w-50 w-lg-100"
+                      src="../static/assets/img/Hero/man_watering.png"
+                      alt="Plant Growth Prediction"
+                    />
+                  </div>
+                  <div class="col-12 col-lg-6">
+                    <h1 class="fs-5 fs-md-3 fs-xxl-2 text-black fw-light mb-4">
+                      Predict &
+                      <span class="fw-bold">Forecast Plant Growth </span
+                      ><br class="d-sm-none d-md-block d-xxl-none" />with
+                      <span class="text-gradient fw-bold">AI Technology</span>
+                    </h1>
+                    <a href="#classify" class="btn btn-gradient fs-8 mt-1 d-inline-flex"
+                      ><span>Classify Plant</span
+                      ><span class="uil uil-arrow-down"></span
+                    ></a>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
+            <section class="mb-9 mb-lg-10 mb-xxl-11" id="classify">
+              <div class="row justify-content-center">
+                <div class="col-12 col-lg-10 col-xl-8">
+                  <div class="text-center mb-6 mb-lg-7">
+                    <h3 class="fs-8 fs-md-7 fs-xxl-6 text-success fw-bold mb-3 text-capitalize">
+                      Upload Plant Image
+                    </h3>
+                    <h1 class="fs-5 fs-md-3 fs-xxl-2 text-secondary text-capitalize fw-light mb-4">
+                      Get Started with <span class="fw-bold">AI Prediction</span>
+                    </h1>
+                    <p class="fs-8 fs-md-11 fs-xxl-7 text-primary mb-0 fw-light">
+                      Upload a clear image of your plant to get instant growth condition predictions and future forecasts
+                    </p>
+                  </div>
+
+                  <form method="POST" enctype="multipart/form-data" id="uploadForm" class="upload-form-container" action="/classify">
+                    <div class="upload-area position-relative" id="uploadArea">
+                      <input
+                        type="file"
+                        name="file"
+                        id="fileInput"
+                        accept="image/*"
+                        class="d-none"
+                        required
+                      />
+                      <div class="upload-content text-center p-5 p-lg-6">
+                        <div class="upload-icon mb-4">
+                          <span class="uil uil-cloud-upload fs-1 text-success"></span>
+                        </div>
+                        <h4 class="text-secondary fw-bold mb-3">
+                          Drag & Drop your plant image here
+                        </h4>
+                        <p class="text-primary mb-4">
+                          or
+                        </p>
+                        <button
+                          type="button"
+                          class="btn btn-gradient fs-8 mb-3"
+                          onclick="document.getElementById('fileInput').click()"
+                        >
+                          <span class="uil uil-image-upload me-2"></span>
+                          Browse Files
+                        </button>
+                        <p class="text-muted fs-9 mb-0">
+                          Supported formats: JPG, PNG, WEBP (Max 10MB)
+                        </p>
+                      </div>
+                      <div class="upload-preview d-none" id="uploadPreview">
+                        <div class="preview-image-container position-relative">
+                          <img id="previewImage" src="" alt="Preview" class="img-fluid rounded" />
+                          <button
+                            type="button"
+                            class="btn btn-sm btn-danger position-absolute top-0 end-0 m-2"
+                            id="removePreview"
+                            onclick="removePreview()"
+                          >
+                            <span class="uil uil-times"></span>
+                          </button>
+                        </div>
+                        <div class="preview-info mt-3 text-center">
+                          <p class="text-success fw-bold mb-2" id="fileName"></p>
+                          <button type="submit" class="btn btn-gradient fs-8">
+                            <span class="uil uil-brain me-2"></span>
+                            Analyze Plant Image
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+
+                  <div class="upload-features mt-6 mt-lg-7">
+                    <div class="row g-4 text-center">
+                      <div class="col-12 col-md-4">
+                        <div class="feature-item">
+                          <span class="uil uil-shield-check fs-2 text-success mb-3 d-block"></span>
+                          <h5 class="text-secondary fw-bold mb-2">Secure Upload</h5>
+                          <p class="text-primary fs-9 mb-0">Your images are processed securely and privately</p>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-4">
+                        <div class="feature-item">
+                          <span class="uil uil-bolt fs-2 text-success mb-3 d-block"></span>
+                          <h5 class="text-secondary fw-bold mb-2">Instant Results</h5>
+                          <p class="text-primary fs-9 mb-0">Get predictions in seconds using AI technology</p>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-4">
+                        <div class="feature-item">
+                          <span class="uil uil-chart-line fs-2 text-success mb-3 d-block"></span>
+                          <h5 class="text-secondary fw-bold mb-2">Accurate Predictions</h5>
+                          <p class="text-primary fs-9 mb-0">94% accuracy with advanced ML models</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+
+
+            <div class="row g-4 g-lg-6 g-xl-7 align-items-center">
+                <div class="col-12 col-lg-6 order-1 order-lg-0">
+                  <p
+                    class="fs-8 fs-md-7 fs-xxl-6 text-success fw-bold mb-x1 text-capitalize"
+                  >
+                    advanced ai technology
+                  </p>
+                  <h1
+                    class="fs-5 fs-md-3 fs-xxl-2 text-secondary text-capitalize fw-light mb-4"
+                  >
+                    Accurate <span class="fw-bold">Growth Predictions </span
+                    ><br class="d-none d-md-block d-lg-none" />for
+                    <span class="fw-bold">Any Plant Species</span>
+                  </h1>
+                  <p
+                    class="fs-8 fs-md-11 fs-xxl-7 text-primary mb-5 mb-lg-6 mb-xl-7 fw-light"
+                  >
+                    Our deep learning models use convolutional neural networks
+                    for plant classification and LSTM networks for time-series
+                    forecasting. Get precise predictions based on temperature,
+                    humidity, soil moisture, pH, light intensity, and plant
+                    age.
+                  </p>
+                </div>
+                <div class="col-12 col-lg-6 order-0 order-lg-1">
+                  <img
+                    class="img-fluid w-50 w-lg-100"
+                    src="../static/assets/img/Hero/planting.png"
+                    alt="Plant Growth Analysis"
+                  />
+                </div>
+              </div>
+
+          </div>
+          <button class="btn scroll-to-top" data-scroll-top="data-scroll-top">
+            <span class="uil uil-angle-up text-white"></span>
+          </button>
+          <footer
+          >
+            <div
+              class="bg-success py-2 py-md-3 position-relative terms-condition"
+            >
+              <div class="overley-background"></div>
+              <p class="text-white text-center">© 2025 Plant Growth AI. All rights reserved.</p>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </main>
+    <!-- ===============================================-->
+    <!--    End of Main Content-->
+    <!-- ===============================================-->
+
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+    <script src="../static/vendors/popper/popper.min.js"></script>
+    <script src="../static/vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="../static/vendors/is/is.min.js"></script>
+    <script src="../static/vendors/countup/countUp.umd.js"></script>
+    <script src="../static/vendors/swiper/swiper-bundle.min.js"></script>
+    <script src="../static/vendors/lodash/lodash.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="../static/vendors/list.js/list.min.js"></script>
+    <script src="../static/assets/js/theme.js"></script>
+
+    <script>
+        const uploadArea = document.getElementById('uploadArea');
+        const fileInput = document.getElementById('fileInput');
+        const uploadPreview = document.getElementById('uploadPreview');
+        const previewImage = document.getElementById('previewImage');
+        const fileName = document.getElementById('fileName');
+        const uploadContent = document.querySelector('.upload-content');
+
+        // Drag and drop handlers
+        uploadArea.addEventListener('dragover', (e) => {
+          e.preventDefault();
+          uploadArea.classList.add('dragover');
+        });
+
+        uploadArea.addEventListener('dragleave', () => {
+          uploadArea.classList.remove('dragover');
+        });
+
+        uploadArea.addEventListener('drop', (e) => {
+          e.preventDefault();
+          uploadArea.classList.remove('dragover');
+          const files = e.dataTransfer.files;
+          if (files.length > 0) {
+            handleFile(files[0]);
+          }
+        });
+
+        fileInput.addEventListener('change', (e) => {
+          if (e.target.files.length > 0) {
+            handleFile(e.target.files[0]);
+          }
+        });
+
+        function handleFile(file) {
+          if (!file.type.startsWith('image/')) {
+            alert('Please upload an image file');
+            return;
+          }
+          
+          if (file.size > 10 * 1024 * 1024) {
+            alert('File size should be less than 10MB');
+            return;
+          }
+
+          fileInput.files = new DataTransfer().files;
+          const dataTransfer = new DataTransfer();
+          dataTransfer.items.add(file);
+          fileInput.files = dataTransfer.files;
+
+          const reader = new FileReader();
+          reader.onload = (e) => {
+            previewImage.src = e.target.result;
+            fileName.textContent = file.name;
+            uploadContent.classList.add('d-none');
+            uploadPreview.classList.remove('d-none');
+          };
+          reader.readAsDataURL(file);
+        }
+
+        function removePreview() {
+          fileInput.value = '';
+          previewImage.src = '';
+          uploadContent.classList.remove('d-none');
+          uploadPreview.classList.add('d-none');
+        }
+      </script>
+  </body>
+</html>

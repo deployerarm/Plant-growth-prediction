@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>Plant Growth Condition Prediction & Forecasting | Aranyak</title>
+    <meta
+      name="description"
+      content="Predict plant growth conditions and forecast future growth using AI-powered machine learning models. Get accurate predictions for height, leaf area, and health scores."
+    />
+
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../static/assets/img/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../static/assets/img/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../static/assets/img/favicons/favicon-16x16.png"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="../static/assets/img/favicons/favicon.ico"
+    />
+    <link rel="manifest" href="../static/assets/img/favicons/manifest.json" />
+    <meta
+      name="msapplication-TileImage"
+      content="../static/assets/img/favicons/mstile-150x150.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <script src="../static/assets/js/config.js"></script>
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link
+      rel="stylesheet"
+      href="../static/vendors/swiper/swiper-bundle.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="../static/assets/css/theme.css"
+      rel="stylesheet"
+      id="style-default"
+    />
+    <link
+      href="../static/assets/css/user-rtl.css"
+      rel="stylesheet"
+      id="user-style-rtl"
+    />
+    <link
+      href="../static/assets/css/user.css"
+      rel="stylesheet"
+      id="user-style-default"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+  </head>
+
+  <body>
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+      <div class="bg-white">
+        <div class="content">
+          <nav
+            class="navbar navbar-expand-lg py-1"
+            id="navbar-top"
+            data-navbar-soft-on-scroll="data-navbar-soft-on-scroll"
+          >
+            <div class="container">
+              <a class="navbar-brand me-lg-auto cursor-pointer text-decoration-none" href=""
+                ><span class="text-gradient fw-bold fs-4 fs-md-3">Plant Growth AI</span>
+              </a>
+              <div
+                class="collapse navbar-collapse"
+                id="navbarSupportedContent"
+                data-navbar-collapse="data-navbar-collapse"
+              >
+                <div
+                  class="container d-lg-flex justify-content-lg-end pe-lg-0 w-lg-100"
+                >
+                  <ul
+                    class="navbar-nav mt-2 mt-lg-1 ms-lg-4 ms-xl-8 ms-2xl-9 gap-lg-x1"
+                    data-navbar-nav="data-navbar-nav"
+                  >
+                    <li class="nav-item">
+                      <a
+                        class="nav-link nav-bar-item px-0"
+                        href="/"
+                        title="home"
+                        >Home</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link nav-bar-item px-0"
+                        href="/logon"
+                        title="Get Started"
+                        >Get Started</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+          <div
+            class="container"
+            data-bs-target="#navbar-top"
+            data-bs-spy="scroll"
+            tabindex="0"
+          >
+            <section
+              class="mb-9 mb-lg-10 mb-xxl-11 text-center text-lg-start mt-9"
+              id="home"
+            >
+              <div>
+                <div
+                  class="row g-4 g-lg-6 g-xl-7 mb-6 mb-lg-7 mb-xl-10 align-items-center"
+                >
+                  <div class="col-12 col-lg-6">
+                    <img
+                      class="img-fluid w-50 w-lg-100"
+                      src="../static/assets/img/Hero/man_watering.png"
+                      alt="Plant Growth Prediction"
+                    />
+                  </div>
+                  <div class="col-12 col-lg-6">
+                    <h1 class="fs-5 fs-md-3 fs-xxl-2 text-black fw-light mb-4">
+                      Predict &
+                      <span class="fw-bold">Forecast Plant Growth </span
+                      ><br class="d-sm-none d-md-block d-xxl-none" />with
+                      <span class="text-gradient fw-bold">AI Technology</span>
+                    </h1>
+                    
+                    <a href="/logon" class="btn btn-gradient fs-8 mt-1 d-inline-flex"
+                      ><span>Get Started</span
+                      ><span class="uil uil-arrow-right"></span
+                    ></a>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
+            <section
+              class="mb-9 mb-lg-10 mb-xxl-11 text-center text-lg-start"
+              id="about"
+            >
+              <h4
+                class="mb-x1 fs-8 fs-md-7 fs-xxl-6 text-success fw-bold pt-6 text-capitalize"
+              >
+                About the system
+              </h4>
+              <h1
+                class="fs-5 fs-lg-3 fs-xl-2 text-secondary text-capitalize fw-light mb-x1"
+              >
+                How our
+                <span class="fw-bold">AI-Powered </span>prediction<br />system
+                <span class="fw-bold">works</span>
+              </h1>
+              <div class="row mb-7 mb-lg-8 mb-xl-9 gap-3">
+                <div class="col-12 col-lg">
+                  <p
+                    class="text-black fs-10 fs-md-9 fs-xxl-8 lh-xl mb-0 line-clamp-5"
+                  >
+                    Our Plant Growth Condition Prediction system uses
+                    state-of-the-art machine learning models to analyze plant
+                    images and environmental conditions. Upload a plant image,
+                    and our MobileNet-based classifier identifies the plant
+                    species. Then, provide environmental data to get accurate
+                    growth predictions including height, leaf area, and health
+                    scores.
+                  </p>
+                </div>
+                <div class="col-12 col-lg">
+                  <p
+                    class="text-black fs-10 fs-md-9 fs-xxl-8 lh-xl mb-0 line-clamp-5"
+                  >
+                    The forecasting module uses LSTM (Long Short-Term Memory)
+                    neural networks to predict future growth patterns. Get
+                    60-day and 120-day growth forecasts based on current
+                    conditions. Our system considers temperature, humidity, soil
+                    moisture, pH levels, light intensity, and plant age to
+                    deliver precise predictions that help optimize plant care
+                    and maximize growth potential.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section
+              class="mb-9 mb-lg-10 mb-xxl-11 text-center text-lg-start mt-1"
+              id="support"
+            >
+              <div class="row g-4 g-lg-6 g-xl-7 pt-6">
+                <div class="d-none d-lg-block col-lg-6 text-center">
+                  <img
+                    class="img-fluid"
+                    src="../static/assets/img/illustrations/women_watering.png"
+                    alt=""
+                  />
+                </div>
+                <div
+                  class="col-12 col-lg-6 d-flex flex-column justify-content-center mt-0"
+                >
+                  <p
+                    class="fs-8 fs-md-7 fs-xxl-6 text-success fw-bold my-0 text-capitalize"
+                  >
+                    ready to start
+                  </p>
+                  <h1
+                    class="fs-5 fs-lg-4 fs-xl-3 text-secondary text-capitalize fw-light mt-3 mb-4"
+                  >
+                    Get Started with <br />
+                    <span class="fw-bold">Plant Growth Prediction</span>
+                  </h1>
+                  <p
+                    class="text-success fs-8 fs-lg-7 text-capitalize beginner-guide my-4"
+                  >
+                    Upload a plant image and get instant <span class="fw-bold"
+                      >AI-powered predictions </span
+                    ><br class="d-none d-xxl-block" />for growth conditions and future forecasts
+                  </p>
+                  <div class="d-flex flex-column flex-sm-row gap-3">
+                    <a href="/" class="btn btn-gradient fs-8 d-inline-flex">
+                      <span>start prediction</span>
+                      <span class="uil uil-arrow-right ms-2"></span>
+                    </a>
+                    <a href="#about" class="btn btn-outline-success fs-8 d-inline-flex">
+                      <span>learn more</span>
+                      <span class="uil uil-info-circle ms-2"></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <button class="btn scroll-to-top" data-scroll-top="data-scroll-top">
+            <span class="uil uil-angle-up text-white"></span>
+          </button>
+          <footer
+          >
+            <div
+              class="bg-success py-2 py-md-3 position-relative terms-condition"
+            >
+              <div class="overley-background"></div>
+              <p class="text-white text-center">© 2025 Plant Growth AI. All rights reserved.</p>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </main>
+    <!-- ===============================================-->
+    <!--    End of Main Content-->
+    <!-- ===============================================-->
+
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+    <script src="../static/vendors/popper/popper.min.js"></script>
+    <script src="../static/vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="../static/vendors/is/is.min.js"></script>
+    <script src="../static/vendors/countup/countUp.umd.js"></script>
+    <script src="../static/vendors/swiper/swiper-bundle.min.js"></script>
+    <script src="../static/vendors/lodash/lodash.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="../static/vendors/list.js/list.min.js"></script>
+    <script src="../static/assets/js/theme.js"></script>
+  </body>
+</html>
